@@ -1,0 +1,9 @@
+nav ul a{
+    font-size: 1.5rem !important;
+}
+.signin_form{
+    postion:relative;
+    margin-top: 6%;
+    margin-left: 2%;
+
+}

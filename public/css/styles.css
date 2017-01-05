@@ -1,0 +1,15 @@
+nav ul a{
+    font-size: 1.5rem !important;
+}
+.signin_form{
+    position:relative;
+    margin-top: 10%;
+    margin-left: 2%;
+
+}
+
+.signin{
+    background: #e2e2e2;
+    border-radius: 20px;
+
+}

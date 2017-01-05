@@ -1,0 +1,30 @@
+{
+  "name": "organisation_master",
+  "version": "1.0.0",
+  "description": "this makes sharing work through excel easy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node controllers/index.js"
+  },
+  "author": "preetham.salehundam@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "excel-stream": "^1.1.1",
+    "exceljs": "^0.2.37",
+    "express": "^4.14.0",
+    "express-fileupload": "0.0.5",
+    "json2xls": "^0.1.2",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.7.1",
+    "node-excel": "^0.5.0",
+    "node-excel-to-json": "0.0.3",
+    "node-promise": "^0.5.12",
+    "sync": "^0.2.5",
+    "synchronize": "^2.0.0"
+  },
+  "devDependencies": {
+    "excel-as-json": "^1.0.4",
+    "node-excel": "^0.5.0"
+  }
+}

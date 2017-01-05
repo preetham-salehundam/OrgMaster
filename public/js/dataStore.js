@@ -1,0 +1,3 @@
+angular.service('dataStore',[function () {
+    
+}])
