@@ -1,5 +1,7 @@
+
 var fileUpload = require('express-fileupload');
 var bodyParser = require('body-parser');
+json2xls =  require('json2xls');
 
 
 module.exports = function (app) {
@@ -10,8 +12,10 @@ module.exports = function (app) {
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         next();
     });
+    app.use(json2xls.middleware);
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
+    
     app.post('/uploadDoc', docOps.upload);
     app.post('/parseUpload', docOps.parseUpload);
     app.get('/docs', docOps.findAll);
@@ -22,5 +26,8 @@ module.exports = function (app) {
     app.get('/records', docOps.fetchUserRelatedData);
     app.get('/records_all', docOps.fetchDocData);
     app.post('/records',docOps.updateUserData);
-    app.get('/uploadedDocs',docOps.getAllDocsForUser)
+    app.get('/uploadedDocs',docOps.getAllDocsForUser);
+    app.get('/downloadDoc',docOps.downloadDocbyId);
+    app.get('/downloadXl',docOps.downloadExcel);
+    
 }

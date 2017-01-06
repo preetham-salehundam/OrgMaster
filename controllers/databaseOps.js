@@ -8,6 +8,8 @@ module.exports = {
         var self = this;
         var deferred = defer();
         promise.then(function onSuccess(parsedXldata) {
+        	console.log("promise");
+        	console.log(parsedXldata);
             self.persistXlData(parsedXldata,Owner).then(function (id) {
                 deferred.resolve(id);
             }, function (err) {
@@ -26,6 +28,7 @@ module.exports = {
             if (parsedXlData) {
                 var saved_data = "";
                 var doc_id;
+console.log("persist")
                 console.log(JSON.stringify(fileData));
                 saved_data = new documentModel({ exceldata: parsedXlData, dateUploaded: +new Date(),excelOwner:fileData.user_id,fileName:fileData.filename });
                 saved_data.save(function (err, data) {

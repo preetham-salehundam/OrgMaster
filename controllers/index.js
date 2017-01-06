@@ -8,6 +8,7 @@ var Promise = require('node-promise').Promise;
 var defer = require("node-promise").defer;
 var Excel = require('exceljs');
 var app = express();
+var zip = require('express-zip');
 var dbOps=require('./databaseOps')
 require('../models/documentModel');
 

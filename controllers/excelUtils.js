@@ -6,13 +6,13 @@ defer = require("node-promise").defer;
 module.exports = {
     convertXltoJson: function (filePath,callback) {
         try{
-            
+            console.log(filePath);
             excel2Json(filePath, function (err, output) {
             if (err) {
                 console.error(err);
                 throw("Error : "+err); 
             } else {
-               
+               console.log(output);
                 var return_val=JSON.stringify(output)?JSON.stringify(output):output;
                 return callback(null,return_val);
 
@@ -38,6 +38,8 @@ module.exports = {
                 deferred.reject(err);
             } else {
                 parsedXlData = response;
+                console.log("parsedXLdata");
+                console.log(parsedXlData);
                 deferred.resolve(parsedXlData);
             }
         });
